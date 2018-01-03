@@ -5,8 +5,8 @@ var AWS = require('aws-sdk');
 var sqs = new AWS.SQS({region : 'us-east-2'});
 
 module.exports.handler = function(eventRecord) {
-  var query = 'SELECT * FROM Events.event WHERE videoid= ? AND viewinstanceid = ? allow filtering;';
-  var queryParams = [eventRecord.videoId, eventRecord.viewInstanceId];
+  var query = 'SELECT * FROM Events.event WHERE viewinstanceid = ? allow filtering;';
+  var queryParams = [eventRecord.viewInstanceId];
   // console.log('PARAMS:', queryParams);
 
   client.execute(query, queryParams, { prepare: true })

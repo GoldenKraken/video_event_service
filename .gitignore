@@ -3,6 +3,12 @@ config/development.json
 config/production.json
 config/staging.json
 config/test.json
+server/logger.js
+stdout.txt
+test.csv
+writeouttofile.js
+cassandraDataFaker.js
+incomingDataSample.js
 
 # OS X
 .DS_Store
